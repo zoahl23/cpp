@@ -1,0 +1,88 @@
+﻿================ Tham so mặc định ===============
+
+void myFunction(string country = "Norway") {
+	cout << country << "\n";
+}
+
+int main() {
+	myFunction("Sweden");
+	myFunction("India");
+	myFunction();
+	myFunction("USA");
+	return 0;
+}
+
+// Sweden
+// India
+// Norway
+// USA
+
+============== Nhiều thông số ==============
+
+void myFunction(string fname, int age) {
+  cout << fname << " Refsnes. " << age << " years old. \n";
+}
+
+int main() {
+  myFunction("Liam", 3);
+  myFunction("Jenny", 14);
+  myFunction("Anja", 30);
+  return 0;
+}
+
+// Liam Refsnes. 3 years old.
+// Jenny Refsnes. 14 years old.
+// Anja Refsnes. 30 years old.
+
+=========== Hàm có giá trị trả về ============
+
+int myFunction(int x) {
+  return 5 + x;
+}
+
+int main() {
+  cout << myFunction(3);
+  return 0;
+}
+
+// Outputs 8 (5 + 3)
+
+==========================
+
+int myFunction(int x, int y) {
+  return x + y;
+}
+
+int main() {
+  cout << myFunction(5, 3);
+  return 0;
+}
+
+// Outputs 8 (5 + 3)
+
+=========== Có thể lưu trữ kết quả trong 1 biến ===========
+
+int myFunction(int x, int y) {
+  return x + y;
+}
+
+int main() {
+  int z = myFunction(5, 3);
+  cout << z;
+  return 0;
+}
+// Outputs 8 (5 + 3)
+
+=========== Truyền mảng dưới dạng tham số ============
+
+void myFunction(int myNumbers[5]) {
+  for (int i = 0; i < 5; i++) {
+    cout << myNumbers[i] << "\n";
+  }
+}
+
+int main() {
+  int myNumbers[5] = {10, 20, 30, 40, 50};
+  myFunction(myNumbers);
+  return 0;
+}
